@@ -5,8 +5,8 @@ require('isomorphic-fetch');
 function App() {
   const [data,setData] = useState(null);
   const [searchData,setSearch] = useState("");
- useEffect(async()=>{
-  await fetch('https://reqres.in/api/users?page=2')
+ useEffect(()=>{
+   fetch('https://reqres.in/api/users?page=2')
   .then(function(response) {
       if (response.status >= 400) {
           throw new Error("Bad response from server");

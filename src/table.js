@@ -8,7 +8,7 @@ if(data){
         <div>
             <table className="table">
                 {
-                     data.length==0?
+                     data.length===0?
                      <thead>
                          <tr>
                          <td>
@@ -23,7 +23,7 @@ if(data){
                          {
                          Object.keys(data[0]).map(
                                 (headding)=>{
-                                    return <th>
+                                    return <th key={headding}>
                                          {headding}
                                      </th>
                                 }
@@ -35,17 +35,21 @@ if(data){
                      {                       
                          data.map(
                              (dt)=>{
-                                 return <tr>                                
+                                 return <tr key={Math.random()}>                                
                                         {
                                            Object.keys(dt).map(
                                                (key)=>{return key==="avatar"?
-                                               <td className="tdAvatar">
+                                               <td
+                                               key={Math.random()}
+                                               className="tdAvatar">
                                                   <div className="RoundProf justify-content-center">
-                                                  <img className="tdImg" src={dt[key]}/>
+                                                  <img className="tdImg" src={dt[key]} alt="Profile Img"/>
                                                   </div>
                                                 </td>
                                                    :
-                                                  <td>
+                                                  <td
+                                                  key={Math.random()}
+                                                  >
                                                      {
                                                          dt[key]
                                                      }
