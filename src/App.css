@@ -27,7 +27,20 @@
 .App-link {
   color: #61dafb;
 }
-
+.tdAvatar{
+ display: flex;
+ justify-content: center;
+}
+.tdImg{
+  width: 100%;
+  height: 100%;
+}
+.RoundProf{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
