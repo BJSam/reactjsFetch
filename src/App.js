@@ -18,7 +18,13 @@ function App() {
   });
  },[]);
  function search(data){   
-  return  data.filter(dt=>dt.first_name.toLowerCase().indexOf(searchData)>-1)
+  return  data.filter(
+    (dt)=>dt.first_name.toLowerCase().indexOf(searchData)>-1 ||
+    dt.email.toLowerCase().indexOf(searchData)>-1 ||
+    dt.id.toString().toLowerCase().indexOf(searchData)>-1 ||
+    dt.last_name.toLowerCase().indexOf(searchData)>-1 
+    
+    )
  }
  if(data != null){
   return <div className="App">
