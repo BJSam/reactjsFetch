@@ -39,7 +39,7 @@ function App() {
  }else{
   return (
     <div className="App">
-      <h1 className="text-danger">No Data</h1>
+      <h1 className="text-success">Loading Please Wait...</h1>
     </div>
   );
  }
